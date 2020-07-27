@@ -1,0 +1,13 @@
+---
+- name: Apt update
+    become: yes
+    apt:
+      update_cache: yes
+    changed_when: false
+
+- name: Install "Mininet"
+  become: yes
+  apt:
+    name: mininet
+    autoclean: yes
+    autoremove: yes
