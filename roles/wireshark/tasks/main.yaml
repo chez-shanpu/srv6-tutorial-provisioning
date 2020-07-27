@@ -1,9 +1,11 @@
 ---
 - name: Add wireshark repository
+  become: yes
   apt_repository:
     repo: 'ppa:wireshark-dev/stable'
 
 - name: Install wireshark
+  become: yes
   apt:
     name: wireshark
     autoclean: yes
