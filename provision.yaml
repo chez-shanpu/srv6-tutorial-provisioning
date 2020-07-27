@@ -7,3 +7,6 @@
 
     - name: frr
       tags: frr
+
+    - name: rose
+      tags: rose

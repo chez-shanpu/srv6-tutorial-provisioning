@@ -8,4 +8,4 @@
 
 - name: Install python dependencies
   pip:
-    requirements: "{{ rose_path }}"/requirements.txt
+    requirements: "{{ rose_path }}/requirements.txt"
