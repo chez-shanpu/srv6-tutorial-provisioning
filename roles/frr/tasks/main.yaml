@@ -1,0 +1,9 @@
+---
+- name: Install frr
+  become: yes
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  loop:
+    - frr
+    - frr-pythontools

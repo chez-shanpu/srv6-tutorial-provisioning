@@ -4,3 +4,6 @@
   roles:
     - name: mininet
       tags: mininet
+
+    - name: frr
+      tags: frr
