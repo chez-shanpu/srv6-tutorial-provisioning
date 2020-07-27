@@ -10,3 +10,6 @@
 
     - name: rose
       tags: rose
+
+    - name: wireshark
+      tags: wireshark
