@@ -1,0 +1,8 @@
+---
+- name: Install "Mininet"
+  become: yes
+  apt:
+    name: mininet
+    autoclean: yes
+    autoremove: yes
+    update_cache: yes
