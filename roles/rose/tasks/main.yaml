@@ -6,9 +6,12 @@
     force: yes
   changed_when: false
 
-# mininetがroot権限での実行を必要とするため，roseの実行pythonスクリプトにsudoが必要
-# 何か他に方法がある気がしなくもないがひとまずはこれで対処
+# mininetがroot権限での実行を必要とするため，rootユーザがパッケージを見つけれないといけない
+# 何か他に方法がある気がしなくもないがひとまずはスクリプトファイルがある箇所にパッケージをインストールすることで対処
 - name: Install python dependencies
-  become: yes
   pip:
     requirements: "{{ rose_path }}/requirements.txt"
+    extra_args: "-t {{ item }}"
+  loop:
+    - "{{ rose_path }}/nets/8routers-isis-ipv6/"
+    - "{{ rose_path }}/nets/8r-1c-in-band-isis/"
