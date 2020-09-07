@@ -1,4 +1,10 @@
 ---
+- name: Install pip3
+  become: yes
+  apt:
+    name: python3-pip
+    update_cache: yes
+
 - name: git clone netgroup/rose-srv6-tutorial
   git:
     repo: https://github.com/netgroup/rose-srv6-tutorial
